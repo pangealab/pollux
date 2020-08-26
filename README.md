@@ -13,7 +13,7 @@ The default "Hello world!" message displayed can be overridden using the `MESSAG
 
 It is available on DockerHub as:
 
-- [paulbouwer/hello-kubernetes:1.8](https://hub.docker.com/r/paulbouwer/hello-kubernetes/)
+- [pangealab/pollux:latest](https://hub.docker.com/repository/docker/pangealab/pollux)
 
 ## Deploy
 
