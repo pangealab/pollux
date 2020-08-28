@@ -1,6 +1,10 @@
 # This is a basic workflow to help you get started with Actions.
 name: kubernetes-deploy
 
+# Variables
+env:
+  KEY1: 'value1'
+
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 # on:
@@ -10,11 +14,6 @@ name: kubernetes-deploy
 #     branches: [ master ]
 on: 
   [workflow_dispatch]
-
-env:
-  KEY1: 'value1'
-  KEY2: 'value3'
-  KEY3: 'value3'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -26,11 +25,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    
+   
     # Login to Docker Hub
     - name: Login to DockerHub Registry
       run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
 
     # Runs a single command using the runners shell
     - name: Deploy to Kubernetes
-      run: echo "Deploying to Kubernetes using: ${{ env.KEY1 }}"
+      run: echo "Deploying to Kubernetes"
