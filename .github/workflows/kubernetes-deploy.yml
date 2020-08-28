@@ -30,9 +30,9 @@ jobs:
     - name: Login to DockerHub Registry
       run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
 
-    # Runs a single command using the runners shell
-    - name: Deploy to Kubernetes
-      run: echo "Deploying to Kubernetes using ${{ env.KEY1 }}"
+#     # Runs a single command using the runners shell
+#     - name: Deploy to Kubernetes
+#       run: echo "Deploying to Kubernetes using ${{ env.KEY1 }}"
     
     # Configure AWS Credentials
     - name: Configure AWS Credentials
@@ -42,7 +42,7 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-2
 
-    # Deploy to Kubernetes
+#     # Deploy to Kubernetes
 #     - name: Deploy to Kubernetes
 #       uses: Consensys/kubernetes-action@master
 #       env:
