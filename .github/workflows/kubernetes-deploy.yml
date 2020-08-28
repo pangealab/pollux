@@ -11,6 +11,11 @@ name: kubernetes-deploy
 on: 
   [workflow_dispatch]
 
+env:
+  key1: 'value1'
+  key2: 'value3'
+  key3: 'value3'
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
