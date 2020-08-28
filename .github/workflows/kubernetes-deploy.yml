@@ -32,4 +32,4 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Deploy to Kubernetes
-      run: echo "Deploying to Kubernetes using ${KEY1}"
+      run: echo "Deploying to Kubernetes using ${{ env.KEY1 }}"
