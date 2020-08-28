@@ -12,9 +12,9 @@ on:
   [workflow_dispatch]
 
 env:
-  key1: 'value1'
-  key2: 'value3'
-  key3: 'value3'
+  KEY1: 'value1'
+  KEY2: 'value3'
+  KEY3: 'value3'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -33,4 +33,4 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Deploy to Kubernetes
-      run: echo "Deploying to Kubernetes"
+      run: echo "Deploying to Kubernetes using: ${{ env.KEY1 }}"
