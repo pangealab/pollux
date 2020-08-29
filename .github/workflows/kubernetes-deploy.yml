@@ -52,4 +52,3 @@ jobs:
     #     KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
     #   with:
     #     args: get pods -A
-    
