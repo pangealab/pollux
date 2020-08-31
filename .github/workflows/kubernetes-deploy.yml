@@ -26,14 +26,6 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
    
-    # Login to Docker Hub
-    - name: Login to DockerHub Registry
-      run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
-
-#     # Runs a single command using the runners shell
-#     - name: Deploy to Kubernetes
-#       run: echo "Deploying to Kubernetes using ${{ env.KEY1 }}"
-    
     # Configure AWS Credentials
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
