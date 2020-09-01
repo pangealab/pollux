@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pollux
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pollux
+  template:
+    metadata:
+      labels:
+        app: pollux
+    spec:
+      containers:
+      - name: pollux
+        image: pangealab/pollux:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: MESSAGE
+          value: Yeppe, I just deployed this on Kubernetes!
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pollux
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: pollux          
