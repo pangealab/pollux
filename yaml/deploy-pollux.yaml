@@ -19,7 +19,7 @@ spec:
         - containerPort: 8080
         env:
         - name: MESSAGE
-          value: Yeppe, I just deployed this on Kubernetes!
+          value: Wow, I just deployed this on Kubernetes!
 ---
 apiVersion: v1
 kind: Service
