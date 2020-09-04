@@ -39,7 +39,7 @@ jobs:
         aws-region: us-east-2
         role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
         role-duration-seconds: 900
-        role-session-name: k8sInteg
+        role-session-name: github
 
     # Deploy to Kubernetes
     - name: Deploy to Kubernetes
